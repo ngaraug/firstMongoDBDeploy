@@ -7,12 +7,12 @@ import ejs from 'ejs';
 // import { fileURLToPath } from 'url';
 // import { dirname } from 'path';
 
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = dirname(__filename);
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
-// var importPath = __dirname + "/day";
+var importPath = __dirname + "/day";
 
-// importPath = importPath.toString()
+importPath = importPath.toString()
 
 
 // // console.log(importPath)
