@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EJS document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <h1><%= weekDay %></h1>
+    <div class="mainContainer">    
+        <div class="todoItems">
+            <h2>Things to do today</h2>
+            <ul>
+                <% for (task in tasks) {  %>
+                    <li>
+                        <form action="/delete" class="listItemForm" method="post">
+                        <input  type="checkbox" class="listItem" name="listItem" value="<%= tasks[task]._id %>" onChange="this.form.submit()"> 
+                        <p><%= tasks[task].taskName%></p>
+                        </form>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+        <form action="/" method="post" class="addTaskForm">
+            <input class="taskAdder" type="text" name="newListItem" placeholder="Enter task to be added" required autocomplete="off">
+            <button type="submit">Add</button>
+        </form>
+    </div>
+</body>
+</html>

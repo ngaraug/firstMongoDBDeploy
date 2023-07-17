@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap');
+
+html{
+    border: 0;
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-image: url('../images/Cash Cat.png');
+    background-size: cover;
+    color: white;
+
+    /* display: grid;
+    place-items: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Poppins', sans-serif;
+
+}
+
+h1{
+    font-weight: 300;
+    font-size: 44px;
+}
+
+.mainContainer{
+    height: 80vh;
+    width: 50vw;
+    backdrop-filter: blur(8px);
+    background-color: rgba(192, 192, 192, 0.322);
+    border-radius: 1rem;
+
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h2{
+    font-weight: 300;
+    font-size: 30px;
+    border-bottom: 1px solid white;
+    text-align: center;
+}
+
+ul{
+    overflow-y: hidden;
+    list-style-type: none;
+    
+}
+.addTaskForm{
+    z-index: 999;
+    position: absolute;
+    transform: translateY(74vh);
+    color: white;
+}
+.taskAdder{
+    width: 35vw;
+    height: 30px;
+    margin-bottom: 3vh;
+    border: 3px solid rgba(128, 0, 128, 0);
+    background-color: rgba(0, 0, 0, 0.432);
+    border-radius: 1rem;
+
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding-left: 1vw;
+    font-weight: 200;
+    
+}
+
+.taskAdder:focus-visible{
+    border: 3px solid purple;
+    outline: 0px;
+}
+
+.taskAdder::placeholder{
+    color: rgba(255, 255, 255, 0.678);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    
+}
+button{
+    height: 38px;
+    width: 4vw;
+    border: 0;
+
+    background-color: rgba(137, 43, 226, 0.37);
+
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    border-radius: 1rem;
+}
+button:hover{
+    background-color: rgba(137, 43, 226, 0.753);
+    cursor: pointer;
+}
+
+.listItemForm{
+    display: flex;
+}
+
+.listItemForm > p{
+    margin: 0;
+    margin-left: 2ch; 
+    font-weight: 200; 
+}
+
+.listItem:checked + p{
+    text-decoration: line-through;
+    text-decoration-color: black;
+    opacity: 50%;
+}
