@@ -48,7 +48,7 @@ const Task = mongoose.model('Task', taskSchema)
 const app  = express();
 
 app.use(bodyParser.urlencoded({extended:true}))
-app.set('views', __dirname + '/../views');      //Added new
+app.set('views', __dirname + '/views');      //Added new
 app.set('view engine', 'ejs')
 app.use(express.static(__dirname + "/public"))
 
