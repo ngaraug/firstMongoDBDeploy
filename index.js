@@ -26,7 +26,7 @@ import {dayOfWeek, sayHello} from "./day.js";        //*sorted*
 
 // ****************DB connection section (start)****************
 import mongoose from "mongoose";
-import _ from "lodash";
+// import _ from "lodash";
 
 const dbName = 'todoDB'
 // const uri = 'mongodb://0.0.0.0:27017/' + dbName
