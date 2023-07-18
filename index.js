@@ -49,7 +49,7 @@ const app  = express();
 
 app.use(bodyParser.urlencoded({extended:true}))
 app.set('view engine', 'ejs')
-app.use(express.static("public"))
+app.use(express.static(__dirname + "public"))
 
 // var tasks = [];              //From V1.0
 
