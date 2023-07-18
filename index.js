@@ -64,7 +64,7 @@ app.get("/", (req, res)=>{
     Task.find({}).then((doc)=>{                             //Reading the DB for the tasks
         tasks = doc 
         // console.log(tasks)
-        res.render('list.ejs', {weekDay : today, tasks: tasks}) //Rendering the found tasks
+        res.render('list', {weekDay : today, tasks: tasks}) //Rendering the found tasks
     })  
 })
 
